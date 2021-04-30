@@ -8,11 +8,22 @@
 
     <header>
         <%- include('../partials/header'); %>
+        <br>
     </header>
 
     <main>
-        
-
+        <form name="dropdown_menu" id="dropdown_menu" action="/action_page" method="post">
+            <select name="coding_language" id="subject">
+              <option value="" selected="selected">Select Programming Language</option>
+              <option value="Python" name="Python">Python</option>
+              <option value="C" name="C">C</option>
+              <option value="Java" name="Java">Java</option>
+              <option value="C#" name="C#">C#</option>
+              <option value="Javascript" name="Javascript">Javascript</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Submit">
+          </form>
     </main>
 
     <footer>
