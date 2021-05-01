@@ -12,8 +12,10 @@
     </header>
 
     <main>
-        <div class="jumbotron">
-            <h1><%=programming_language[selection].name%></h1>
+        <div class="results">
+            <h1>Programming Language Background & Information</h1>
+            <br><br>
+            <h4><strong><%= programming_language[selection].name%></strong></h4>
             <p><%= tagline %></p>
             <ul>
                 <strong><%= programming_language[selection].name%></strong>
@@ -22,11 +24,13 @@
                 and holds <%= programming_language[selection].marketSharePercent %>% of the market share.
                 Its typing disciplines include: <%= JSON.stringify(programming_language[selection].typingDisciplines) %>.
             </ul>
-            <br><br>
-            <p>Choose Language:</p>
+            <br><br><br><br><br><br>
+        </div>
+        <div class="further_browsing">
+            <p>List of Languages:</p>
             <form name="dropdown_menu" id="dropdown_menu" action="/action_page" method="post">
                 <select name="coding_language" id="subject">
-                  <option value="" selected="selected">Select Programming Language</option>
+                  <option value="err" selected="selected">Select Programming Language</option>
                   <option value="0" name="Python">Python</option>
                   <option value="1" name="C">C</option>
                   <option value="2" name="Java">Java</option>

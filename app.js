@@ -21,12 +21,18 @@ app.get('/', function(req, res) {
 app.post('/action_page', function(req,res){
 
     var selection = req.body.coding_language
-    console.log(selection);
+    //console.log(selection);
+
+    if(selection == "err")
+    {
+        res.render('pages/redo_result');
+        return
+    }
 
     axios.get('https://cwrvx8v6xj.execute-api.us-east-2.amazonaws.com/default/apitest')
     .then((response)=>{
 
-        console.log(response.data);
+        //console.log(response.data);
         var tagline = "Information on Chosen Language:"
         res.render('pages/result', {
             programming_language: response.data,
