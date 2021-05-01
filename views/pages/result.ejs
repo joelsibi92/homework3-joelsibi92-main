@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+
+</head>
+<body class="container">
+
+    <header>
+        <%- include('../partials/header'); %>
+        <br>
+    </header>
+
+    <main>
+        <div class="jumbotron">
+            <h1><%=programming_language[selection].name%></h1>
+            <p><%= tagline %></p>
+            <ul>
+                <strong><%= programming_language[selection].name%></strong>
+                was created on <%= programming_language[selection].createdAt %>, 
+                by <%= programming_language[selection].createdBy %>,
+                and holds <%= programming_language[selection].marketSharePercent %>% of the market share.
+                Its typing disciplines include: <%= JSON.stringify(programming_language[selection].typingDisciplines) %>.
+            </ul>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+</html>
