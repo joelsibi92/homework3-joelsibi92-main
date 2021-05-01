@@ -22,9 +22,21 @@
                 and holds <%= programming_language[selection].marketSharePercent %>% of the market share.
                 Its typing disciplines include: <%= JSON.stringify(programming_language[selection].typingDisciplines) %>.
             </ul>
+            <br><br>
+            <p>Choose Language:</p>
+            <form name="dropdown_menu" id="dropdown_menu" action="/action_page" method="post">
+                <select name="coding_language" id="subject">
+                  <option value="" selected="selected">Select Programming Language</option>
+                  <option value="0" name="Python">Python</option>
+                  <option value="1" name="C">C</option>
+                  <option value="2" name="Java">Java</option>
+                  <option value="3" name="C#">C#</option>
+                  <option value="4" name="Javascript">Javascript</option>
+                </select>
+                <br><br>
+                <input type="submit" value="Submit">
+            </form>
         </div>
-
-
     </main>
 
     <footer>
