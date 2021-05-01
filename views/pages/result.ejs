@@ -10,11 +10,12 @@
         <%- include('../partials/header'); %>
         <br>
     </header>
-
+    <!--This is the code which will be outputting results on the webpage-->
+    <!--Is using the variables from the app.js file which passed through programming_language, selection and tagline in order to make everything happen-->
     <main>
         <div class="results">
             <h1>Programming Language Background & Information</h1>
-            <br><br>
+            <br><br>                                                <!--different header sizes and spacings for better viewing-->
             <h4><strong><%= programming_language[selection].name%></strong></h4>
             <p><%= tagline %></p>
             <ul>
@@ -22,10 +23,11 @@
                 was created on <%= programming_language[selection].createdAt %>, 
                 by <%= programming_language[selection].createdBy %>,
                 and holds <%= programming_language[selection].marketSharePercent %>% of the market share.
-                Its typing disciplines include: <%= JSON.stringify(programming_language[selection].typingDisciplines) %>.
+                Its typing disciplines include: <%= JSON.stringify(programming_language[selection].typingDisciplines) %>. <!--stringify used to display the typing disciplines as a whole, could use iterative loop to get individual values-->
             </ul>
             <br><br><br><br><br><br>
         </div>
+        <!--I have this here in order to allow a user to easily check other programming languages after they're done with whatever concurrent one their looking at (should have just made a back button smh my head)-->
         <div class="further_browsing">
             <p>List of Languages:</p>
             <form name="dropdown_menu" id="dropdown_menu" action="/action_page" method="post">

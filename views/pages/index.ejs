@@ -12,12 +12,13 @@
     </header>
 
     <main>
+        <!-- Code which will be creating the drop down menu which users will be using to navigate to desired programming language infos -->
         <div class="home_menu">
             <h1>Programming Language Background & Information</h1>
             <br>
-            <form name="dropdown_menu" id="dropdown_menu" action="/action_page" method="post">
+            <form name="dropdown_menu" id="dropdown_menu" action="/action_page" method="post"> <!--Set to post, and also has an action sending user to said page upon sumbitting-->
                 <select name="coding_language" id="subject">
-                <option value="err" selected="selected">Select Programming Language</option>
+                <option value="err" selected="selected">Select Programming Language</option> <!--Default Value-->
                 <option value="0" name="Python">Python</option>
                 <option value="1" name="C">C</option>
                 <option value="2" name="Java">Java</option>
